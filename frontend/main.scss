@@ -1,0 +1,22 @@
+$primary: #1B264F;
+$secondary: #D9D9D9;
+
+body {
+    background-color: $primary;
+}
+
+#nav {
+    background-color: $secondary;
+    width: 100%;
+    height: 75px;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 100px;
+}
+
+#search {
+    background-color: $secondary;
+    width: 30%;
+    height: 700px;
+    margin-left: 100px
+}
