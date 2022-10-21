@@ -1,5 +1,12 @@
 $primary: #1B264F;
-$secondary: #D9D9D9;
+$secondary: #F5F3F5;
+$darksecondary: rgb(206, 206, 206);
+$brown: #302B27;
+$selecthighlight: #900000;
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 body {
     background-color: $primary;
@@ -8,15 +15,122 @@ body {
 #nav {
     background-color: $secondary;
     width: 100%;
-    height: 75px;
+    height: 65px;
     display: inline-block;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 65px;
 }
 
 #search {
+    background-color: none;
+    width: 100%;
+    //height: 600px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    flex-wrap: wrap;
+}
+
+
+#queries {
+    background-color: #F5F3F5;
+    width: 300px;
+    height: 270px;
+    margin-bottom: 25px;
+    display: grid;
+    padding: 15px;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-rows: repeat(5, 50px);
+    grid-template-areas:
+        "mealtype mealtype mealtype mealtype"
+        "diet diet diet diet"
+        "mincalories mincalories maxcalories maxcalories"
+        "ingredients ingredients ingredients includeexclude"
+        "ingredients ingredients ingredients includeexclude";
+    column-gap: 5px;
+    row-gap: 5px;
+
+    input {
+        outline-width: 0;
+    }
+}
+
+#submit {
     background-color: $secondary;
-    width: 30%;
-    height: 700px;
-    margin-left: 100px
+    width: 155px;
+    height: 55px;
+    display: inline-block;
+    margin-left: 27%;
+    font-size: 25px;
+    border: none;
+
+}
+
+#results {
+    background-color: $brown;
+    width: 700px;
+    height: 600px;
+    display: inline-block;
+}
+
+#mealtype {
+    grid-area: mealtype;
+}
+
+#diet {
+    grid-area: diet;
+}
+
+#mincalories {
+    grid-area: mincalories;
+}
+
+#maxcalories {
+    grid-area: maxcalories;
+}
+
+#ingredients {
+    grid-area: ingredients;
+}
+
+#includeexclude {
+    grid-area: includeexclude;
+    display: flex;
+    justify-content: center;
+    background-color: none;
+    flex-direction: column;
+    row-gap: 5%;
+
+    button {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+
+    }
+}
+
+input,
+button,
+textarea,
+select {
+    text-align: center;
+    font-size: 20px;
+    background-color: $darksecondary;
+    border: none;
+    color: rgb(98, 98, 98);
+    word-break: break-all;
+    word-wrap: break-word;
+    resize: none;
+    outline-width: 0;
+}
+
+select::selection {
+    background-color: $selecthighlight
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
 }

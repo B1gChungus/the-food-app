@@ -1,10 +1,10 @@
-let e = require("express")
-let app = e()
+let express = require("express")
+let app = express()
 let path = require("path")
 
-app.use(e.urlencoded({ extended: false }))
-app.use(e.json())
-app.use(e.static("./"))
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+app.use(express.static("./"))
 
 app.get("/", function (r, re) {
     re.sendFile(path.resolve(__dirname, "../frontend/index.html"))

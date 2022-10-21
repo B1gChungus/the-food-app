@@ -5,14 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meal Plan</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="him.jfif">
 </head>
 
 <body style="margin:0">
     <div id="nav"></div>
     <div id="search">
+        <div style="margin-top:100px;margin-bottom: 50px">
+            <div id="queries">
+                <select id="mealtype">
+                    <option selected hidden>Meal Type</option>
+                    <option value="breakfeast">Breakfeast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+                <select id="diet">
+                    <option selected hidden>Diet Type</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="something">Something</option>
+                    <option value="something2">Something2</option>
+                </select>
+                <!-- <input type="text" id="diet" placeholder="Diet"> -->
+                <input type="text" id="calories" placeholder="Calories">
+                <input type="text" id="days" placeholder="Days">
+                <input type="text" id="carbs" placeholder="Carbs">
+                <input type="text" id="protein" placeholder="Protein">
+                <textarea id="ingredients" placeholder="Ingredients"></textarea>
+                <div id="includeexclude">
+                    <button id="include" onclick="changeinc('include')">Include</button>
+                    <button id="exclude" onclick="changeinc('exclude')">Exclude</button>
+                </div>
+            </div>
+            <!-- "mealtype mealtype"
+                "diet diet"
+                "mincalories maxcalories"
+                "ingredients includeexclude"
+                ". ."; -->
+            <button id="submit">
+                Submit
+            </button>
+        </div>
+        <div id="results">
 
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
